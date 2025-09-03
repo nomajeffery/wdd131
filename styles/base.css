@@ -1,0 +1,150 @@
+/* Reset some defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e6f7f9;
+
+    /* light icy blue */
+    color: #2c3e50;
+
+    /* accessible deep gray-blue */
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Container to center content */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Header styling */
+header {
+    background-color: #a2dff7;
+
+    /* arctic blue */
+    color: #003b5c;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#course-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.2px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+}
+
+nav a {
+    color: #003b5c;
+    background-color: #d0f0f7;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Accessible hover and focus */
+nav a:hover,
+nav a:focus {
+    background-color: #70c7e3;
+    transform: scale(1.03);
+
+    /* Small enough to avoid layout shift */
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #005b7f;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    float: none;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card:hover,
+.card:focus-within {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #005b7f;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Paragraph text */
+p {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+/* Footer */
+footer {
+    background-color: #a2dff7;
+    color: #003b5c;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav {
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+}
