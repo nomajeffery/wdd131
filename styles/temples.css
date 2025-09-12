@@ -1,0 +1,101 @@
+/* Base styles - mobile first */
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-color: #f9f9f9;
+  --font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+/* Hamburger button */
+#menu {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navigation {
+  display: none;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+}
+.navigation a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.navigation a:hover {
+  background-color: var(--accent-color);
+}
+
+/* When menu is open */
+.navigation.open {
+  display: flex;
+}
+
+/* Main content */
+main {
+  max-width: 90%;
+  margin: 1rem auto;
+  text-align: center;
+}
+.album {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  padding: 0.5rem;
+  background: var(--accent-color);
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: var(--primary-color);
+  color: white;
+}
