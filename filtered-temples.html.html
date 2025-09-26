@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+  <link rel="icon" href="https://churchofjesuschrist.org/favicon.ico" />
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temples Around the World</h1>
+    <nav>
+      <button id="home" aria-label="Show all temples">Home</button>
+      <button id="old" aria-label="Show temples before 1900">Old</button>
+      <button id="new" aria-label="Show temples after 2000">New</button>
+      <button id="large" aria-label="Show large temples">Large</button>
+      <button id="small" aria-label="Show small temples">Small</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="loading">Loading temples...</div>
+    <div id="temples-container"></div>
+  </main>
+
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <footer>
+    &copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span>
+  </footer>
+</body>
+</html>
