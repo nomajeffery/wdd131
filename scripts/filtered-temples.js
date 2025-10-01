@@ -55,35 +55,38 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
-   {
+  {
     templeName: "Lisbon Portugal",
     location: "Lisbon, Portugal",
     dedicated: "2019-09-15",
     area: 23000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lisbon-portugal-temple/lisbon-portugal-temple-6315-main.jpg"
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/lisbon-portugal-temple/lisbon-portugal-temple-6315-main.jpg",
   },
   {
     templeName: "Bangkok Thailand",
     location: "Bangkok, Thailand",
     dedicated: "2023-10-22",
     area: 44417,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg"
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg",
   },
   {
     templeName: "Washington D.C.",
     location: "Kensington, Maryland, United States",
     dedicated: "1974-11-19",
     area: 160000,
-    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg"
+    imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg",
   },
 ];
 
-// Extract just the year from the dedicated date string
+// Extract year from the dedicated date
 function getDedicatedYear(dateStr) {
   return parseInt(dateStr.split(",")[0]);
 }
 
-// Display temples in the DOM
+// Display temples on the page
 function displayTemples(templesToDisplay) {
   const container = document.getElementById("temples-container");
   container.innerHTML = "";
@@ -103,10 +106,9 @@ function displayTemples(templesToDisplay) {
   });
 }
 
-// Main function to run after page loads
+// Run once DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   const loading = document.getElementById("loading");
-  const container = document.getElementById("temples-container");
   loading.style.display = "none";
 
   displayTemples(temples);
@@ -117,28 +119,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("old").addEventListener("click", () => {
-    const filtered = temples.filter((temple) => getDedicatedYear(temple.dedicated) < 1900);
+    const filtered = temples.filter(
+      (temple) => getDedicatedYear(temple.dedicated) < 1900
+    );
     displayTemples(filtered);
   });
 
   document.getElementById("new").addEventListener("click", () => {
-    const filtered = temples.filter((temple) => getDedicatedYear(temple.dedicated) > 2000);
+    const filtered = temples.filter(
+      (temple) => getDedicatedYear(temple.dedicated) > 2000
+    );
     displayTemples(filtered);
   });
 
   document.getElementById("large").addEventListener("click", () => {
-    const filtered = temples.filter((temple) => temple.area > 50000);
+    const filtered = temples.filter((temple) => temple.area > 90000);
     displayTemples(filtered);
   });
 
   document.getElementById("small").addEventListener("click", () => {
-    const filtered = temples.filter((temple) => temple.area <= 50000);
+    const filtered = temples.filter((temple) => temple.area < 10000);
     displayTemples(filtered);
   });
 
-  // Back to top button functionality
+  // Back to top button
   const backToTop = document.getElementById("backToTop");
-
   window.addEventListener("scroll", () => {
     backToTop.style.display = window.scrollY > 200 ? "block" : "none";
   });
