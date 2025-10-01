@@ -55,6 +55,27 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg",
   },
+   {
+    templeName: "Lisbon Portugal",
+    location: "Lisbon, Portugal",
+    dedicated: "2019-09-15",
+    area: 23000,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lisbon-portugal-temple/lisbon-portugal-temple-6315-main.jpg"
+  },
+  {
+    templeName: "Bangkok Thailand",
+    location: "Bangkok, Thailand",
+    dedicated: "2023-10-22",
+    area: 44417,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bangkok-thailand-temple/bangkok-thailand-temple-40037-main.jpg"
+  },
+  {
+    templeName: "Washington D.C.",
+    location: "Kensington, Maryland, United States",
+    dedicated: "1974-11-19",
+    area: 160000,
+    imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg"
+  },
 ];
 
 // Extract just the year from the dedicated date string
