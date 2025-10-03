@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Feedback Form</title>
+  <link rel="stylesheet" href="styles/form.css">
+  <meta name="description" content="Submit feedback about your medical experience.">
+  <meta name="author" content="idehen noma">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Patient Feedback Form</h1>
+    <form method="get" action="thankyou.html">
+      
+      <!-- Department / Doctor -->
+      <label for="department">Department / Doctor <span aria-hidden="true" class="required">*</span></label>
+      <select id="department" name="department" required>
+        <option value="" disabled selected>Select a Department...</option>
+        <option value="general">General Medicine</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="surgery">Surgery</option>
+        <option value="dental">Dental</option>
+        <option value="pharmacy">Pharmacy</option>
+      </select>
+
+      <!-- Service Rating -->
+      <fieldset>
+        <legend>Rate Your Experience <span aria-hidden="true" class="required">*</span></legend>
+        <label><input type="radio" name="rating" value="1" required> 1 ☆</label>
+        <label><input type="radio" name="rating" value="2"> 2 ☆</label>
+        <label><input type="radio" name="rating" value="3"> 3 ☆</label>
+        <label><input type="radio" name="rating" value="4"> 4 ☆</label>
+        <label><input type="radio" name="rating" value="5"> 5 ☆</label>
+      </fieldset>
+
+      <!-- Visit Date -->
+      <label for="visitDate">Date of Visit <span aria-hidden="true" class="required">*</span></label>
+      <input type="date" id="visitDate" name="visitDate" required>
+
+      <!-- Service Aspects -->
+      <fieldset>
+        <legend>What did you appreciate most? (Check all that apply)</legend>
+        <label><input type="checkbox" name="aspects" value="Friendly Staff"> Friendly Staff</label>
+        <label><input type="checkbox" name="aspects" value="Clean Facility"> Clean Facility</label>
+        <label><input type="checkbox" name="aspects" value="Quick Service"> Quick Service</label>
+        <label><input type="checkbox" name="aspects" value="Professional Care"> Professional Care</label>
+      </fieldset>
+
+      <!-- Written Feedback -->
+      <label for="writtenReview">Additional Comments</label>
+      <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Share your experience..."></textarea>
+
+      <!-- Patient Name -->
+      <label for="patientName">Your Name (Optional)</label>
+      <input type="text" id="patientName" name="patientName">
+
+      <!-- Submit -->
+      <input type="submit" value="Submit Feedback">
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 City Medical Center</p>
+  </footer>
+</body>
+</html>
